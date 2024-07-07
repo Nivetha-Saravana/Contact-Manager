@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#root {
+  background-color: #264b63;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  width: 450px;
+  height: 95vh;
+  background-color: #1c1c1c;
+  border-radius: 1.5rem;
+  margin: 0rem;
+  transition: background-color 0.5s ease;
+}
+.content {
+  margin: 3.5rem 1.8rem;
+}
+.Header {
+  color: rgba(255, 255, 255, 0.205);
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+.Header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.success-message {
+  color: rgb(70, 155, 70);
+  left: 19.4%;
+  top: 35%;
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+/* Search-Section */
+.search-section {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.search-box {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  min-width: 78%;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: rgba(206, 206, 206, 0.4) solid;
+  background-color: #1c1c1c;
+  color: white;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+  font-size: 1.1rem;
+  font-weight: thin;
+}
+.input:focus {
+  outline: rgb(255, 255, 255, 0.8) solid;
+}
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #ffffff;
+  width: 1.1rem;
+  height: 1.1rem;
+  font-weight: bold;
+  transition: fill 0.5s ease;
+}
+.button-section {
+  background-color: #0085ff;
+  width: 3.2rem;
+  border-radius: 50%;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.button-section h2 {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 100;
+}
+/* Main section  */
+.no-contacts {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 80%;
+}
+.no-contacts h2 {
+  margin: 1 rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+.no-contacts .add-contact {
+  margin: 2rem;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  background-color: #0085ff;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+}
+/* Overlay of Form  */
+.overlay {
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.overlay-edit-page {
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.overlay-edit-page.show {
+  opacity: 1;
+  visibility: visible;
+}
+.form {
+  width: 100%;
+  color: white;
+  background-color: rgb(60, 60, 60);
+  margin: 0 1.7rem;
+  border-radius: 1.5rem;
+  padding: 2rem 1.7rem;
+}
+.form h1 {
+  font-size: 1.3rem;
+}
+.form .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.message {
+  margin-top: 0.5rem;
+  color: rgb(185, 75, 75);
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+}
+.close {
+  color: white;
+  transition: all ease 0.5s;
+  font-size: 1.1rem;
+}
+.close:hover {
+  color: red;
+}
+.bottom {
+  margin-top: 1rem;
+}
+.inputGroup {
+  margin: 1em 0 1.3em 0;
+
+  max-width: 100%;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(127, 124, 124);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+  color: white;
+  transition: border-color 0.5s ease;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.9em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+}
+
+/* .inputGroup input:focus ~ label,
+.inputGroup input:valid:not(:focus) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #3c3c3c;
+} */
+.inputGroup input:focus ~ label,
+.inputGroup input:valid ~ label {
+  transform: translateY(-20px) scale(0.9);
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #3c3c3c;
+}
+
+.inputGroup input:not(:focus):not(:valid) ~ label {
+  transform: translateY(0) scale(1);
+  background-color: transparent;
+}
+
+.inputGroup input:focus {
+  border-color: rgb(234, 234, 234);
+}
+
+.add-contacts {
+  color: white;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  background-color: #0085ff;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+}
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Contact LIst Css */
+
+.contact-lists {
+  margin: 1rem 0.7rem 0.3rem 0.7rem;
+  color: white;
+  display: flex;
+  gap: 1.4rem;
+  position: relative;
+  transition: color 0.5s ease;
+}
+.contact-list-container {
+  max-height: 72vh;
+  overflow-y: auto;
+}
+.user-icon {
+  font-size: 3rem;
+  background-color: white;
+  border-radius: 56%;
+}
+.edit-icons {
+  position: absolute;
+  right: 0;
+  color: rgb(205, 204, 204);
+}
+.edit-icons :nth-child(1) {
+  margin-bottom: 0.7rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.edit-icons :nth-child(1) :hover {
+  color: #406ebe;
+}
+.edit-icons :nth-child(3) :hover {
+  color: #b04936;
+}
+.contact-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.contact-email,
+.contact-phone {
+  color: #a1a1a1;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.contact-list-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.contact-list-container::-webkit-scrollbar-track {
+  background-color: transparent transparent;
+}
+
+.contact-list-container::-webkit-scrollbar-thumb {
+  background-color: #486b8b;
+  border-radius: 20px;
+}
+
+.contact-list-container::-webkit-scrollbar-thumb:hover {
+  background-color: #304a65;
+}
+/* Toggle button */
+.toggle-button {
+  position: absolute;
+  left: 80%;
+  top: 90%;
+}
+.toggle {
+  background-color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+.inputs {
+  display: none;
+}
+
+.icons {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 300ms;
+}
+
+.icon--moon {
+  transition-delay: 100ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 100ms;
+  transform: scale(1) rotate(360deg);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+.image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    border-radius: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content {
+    margin: 1.5rem;
+    /* height: 100vh; */
+  }
+
+  .Header h1 {
+    font-size: 1.5rem;
+  }
+
+  .success-message {
+    left: 28%;
+    font-size: 0.7rem;
+  }
+
+  .search-box {
+    max-width: 82%;
+  }
+  .search-section {
+    margin-top: 1rem;
+
+    justify-content: space-between;
+  }
+  .toggle-button {
+    top: 85%;
+  }
+  .contact-list-container {
+    max-height: 84vh;
+  }
+  /* Add more mobile-specific styles as needed */
+}
