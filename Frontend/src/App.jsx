@@ -4,6 +4,7 @@ import { AddContacts } from "./components/AddContacts";
 
 import { UseContact } from "./Context/ContactContext";
 import "./App.css";
+import {UpdateContacts} from './components/UpdatesContacts'
 
 function App() {
   const { darkMode } = UseContact();
@@ -13,7 +14,7 @@ function App() {
       <div className="content">
         <Home />
         <AddContacts />
-        
+        <UpdateContacts/>
       </div>
     </div>
   );

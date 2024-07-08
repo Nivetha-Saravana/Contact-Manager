@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Header } from './Header';
 import { Main } from './Main';
 
+
 export const Home = () => {
   const [setContacts] = useState([]);
   useEffect(() => {
@@ -21,8 +22,7 @@ export const Home = () => {
   return (
     <>
       <Header />
-      <Main />
-      
+      <Main /> 
     </>
   );
 };

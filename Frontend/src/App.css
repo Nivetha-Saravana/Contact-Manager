@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 #root {
-  background-color: #264b63;
+  background-color: #691e68;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@
   transition: fill 0.5s ease;
 }
 .button-section {
-  background-color: #0085ff;
+  background-color: #ff00ee;
   width: 3.2rem;
   border-radius: 50%;
   height: 3.2rem;
@@ -133,7 +133,7 @@ img {
   margin: 2rem;
   color: white;
   padding: 0.5rem 1.5rem;
-  background-color: #0085ff;
+  background-color:#ff00ee;
   border-radius: 0.7rem;
   font-size: 1.1rem;
 }
@@ -273,7 +273,7 @@ img {
   color: white;
   padding: 0.5rem 1.5rem;
   width: 100%;
-  background-color: #0085ff;
+  background-color:#ff00ee;
   border-radius: 0.7rem;
   font-size: 1.1rem;
 }
@@ -341,12 +341,12 @@ input::-webkit-inner-spin-button {
 }
 
 .contact-list-container::-webkit-scrollbar-thumb {
-  background-color: #486b8b;
+  background-color: #87488b;
   border-radius: 20px;
 }
 
 .contact-list-container::-webkit-scrollbar-thumb:hover {
-  background-color: #304a65;
+  background-color: #691e68;
 }
 /* Toggle button */
 .toggle-button {
