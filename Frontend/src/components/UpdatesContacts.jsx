@@ -93,12 +93,12 @@ export const UpdateContacts = () => {
   };
 
   const handleClose = () => {
-    setName("");
-    setEmail("");
-    setPhone("");
+    stopEditingContact(false);
+    setName('');
+    setPhone('');
+    setEmail('');
     setImage(null);
-    setMessage("");
-    stopEditingContact();
+    
   };
 
   if (!showEditPage) return null;
