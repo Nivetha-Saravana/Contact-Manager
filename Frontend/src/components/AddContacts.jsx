@@ -1,4 +1,3 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { UseContact } from '../Context/ContactContext';
@@ -21,16 +20,6 @@ export const AddContacts = () => {
     addContact
   } = UseContact();
 
-  const validateEmail = (email) => {
-    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  const validatePhone = (phone) => {
-    const re = /^\d{10}$/;
-    return re.test(phone);
-  };
-
   const handleSubmit = async () => {
     if (!name || !phone || !email) {
       setMessage('Empty Fields');
@@ -38,6 +27,16 @@ export const AddContacts = () => {
       setTimeout(() => setMessage(''), 1000);
       return;
     }
+
+    const validateEmail = (email) => {
+      const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      return re.test(String(email).toLowerCase());
+    };
+
+    const validatePhone = (phone) => {
+      const re = /^\d{10}$/;
+      return re.test(phone);
+    };
 
     if (!validateEmail(email)) {
       setMessage('Invalid Email');
@@ -76,8 +75,8 @@ export const AddContacts = () => {
     setPhone('');
     setEmail('');
     setImage(null);
-    
   };
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSubmit();
@@ -107,17 +106,19 @@ export const AddContacts = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              onKeyPress={(event) => handleKeyPress(event)}
             />
             <label htmlFor="name">Name</label>
           </div>
           <div className="inputGroup">
             <input
-              type="text" // Changed to "text" to avoid potential input type issues
+              type="text"
               required
               autoComplete="off"
               id="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              onKeyPress={(event) => handleKeyPress(event)}
             />
             <label htmlFor="phone">Phone No</label>
           </div>
@@ -129,6 +130,7 @@ export const AddContacts = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onKeyPress={(event) => handleKeyPress(event)}
             />
             <label htmlFor="email">Email</label>
           </div>

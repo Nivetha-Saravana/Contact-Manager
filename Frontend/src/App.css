@@ -317,7 +317,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .edit-icons :nth-child(1) :hover {
-  color: #406ebe;
+  color: #ff00ee;
 }
 .edit-icons :nth-child(3) :hover {
   color: #b04936;
@@ -347,50 +347,6 @@ input::-webkit-inner-spin-button {
 
 .contact-list-container::-webkit-scrollbar-thumb:hover {
   background-color: #691e68;
-}
-/* Toggle button */
-.toggle-button {
-  position: absolute;
-  left: 80%;
-  top: 90%;
-}
-.toggle {
-  background-color: #fff;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-
-  line-height: 1;
-}
-
-.inputs {
-  display: none;
-}
-
-.icons {
-  grid-column: 1 / 1;
-  grid-row: 1 / 1;
-  transition: transform 300ms;
-}
-
-.icon--moon {
-  transition-delay: 100ms;
-}
-
-.icon--sun {
-  transform: scale(0);
-}
-
-#switch:checked + .icon--moon {
-  transform: rotate(360deg) scale(0);
-}
-
-#switch:checked ~ .icon--sun {
-  transition-delay: 100ms;
-  transform: scale(1) rotate(360deg);
 }
 
 .image-container {
